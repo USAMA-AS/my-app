@@ -7,10 +7,7 @@ import TextForms from "./components/TextForms";
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
+  Route
 } from "react-router-dom";
 
 function App() {
