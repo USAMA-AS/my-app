@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 import Alert from "./components/Alert";
-import About from "./components/About";
+// import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForms from "./components/TextForms";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -38,7 +38,7 @@ function App() {
   }
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar title="Text Converter" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container my-3">
@@ -48,17 +48,17 @@ function App() {
           </Route>
          
           <Route exact path="/">
-          <TextForms showAlert={showAlert} heading="Enter the Text: " mode={mode}/>
+          
           </Route>
         </Switch> */}
 
-        <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/" element={<TextForms showAlert={showAlert} heading="Enter the Text: " mode={mode}/>} />
-      </Routes>
-      
+        {/* <Routes> */}
+        {/* <Route path="/about" element={<About />} /> */}
+        {/* <Route path="/" element={<TextForms showAlert={showAlert} heading="Enter the Text: " mode={mode}/>} /> */}
+      {/* </Routes> */}
+      <TextForms showAlert={showAlert} heading="Word Counter, Character Counter, Remove spaces" mode={mode}/>
       </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
